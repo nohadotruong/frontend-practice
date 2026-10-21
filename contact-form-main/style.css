@@ -1,0 +1,182 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555658;
+    /* border: 1px solid black; */
+}
+
+body
+{
+    background-color: #e0f1e7;
+    width: auto;
+}
+
+.my-form
+{
+    background-color: white;
+    width: 60%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.my-form h1
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #303e3e;
+}
+
+.input-field
+{
+    margin-bottom: 20px;
+}
+
+#name-input
+{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+}
+
+.radio-input-field
+{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+}
+
+input[type="text"], input[type="email"], textarea
+{
+    margin: 10px auto;
+    width: 100%;
+    resize: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #b3b8b8;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus
+{
+    outline: 1px solid #3f6a60;
+}
+
+.error
+{
+    display: none;
+    font-size: 14px;
+    color: red;
+}
+
+#error6
+{
+    margin-top: 5px;
+}
+
+.radio-input-item
+{
+    border: 1px solid #b3b8b8;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.form-alert
+{
+    display: none;
+    border: 1px solid #2a4244;
+    background-color: #2a4244;
+    padding: 20px;
+    position: absolute;
+    width: auto;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: successFormAlert 5s forwards;
+}
+
+.form-alert h3, .form-alert p
+{
+    color: white;
+}
+
+@keyframes successFormAlert
+{
+    0%
+    {
+        top: -10%;
+    }
+    50%
+    {
+        top: 7%;
+    }
+    100%
+    {
+        top: -30%;
+    }
+}
+
+.submit-button button
+{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: white;
+    background-color: #0c7d69;
+    border-radius: 5px;
+}
+
+.submit-button button:hover
+{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: white;
+    background-color: #063f36;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 550px)
+{
+
+    .my-form
+    {
+        width: 80%;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px auto;
+    }
+
+    #name-input
+    {
+        display: block;
+    }
+
+    .radio-input-field
+    {
+        display: block;
+    }
+
+    @keyframes successFormAlert
+    {
+        0%
+        {
+            top: -10%;
+        }
+        50%
+        {
+            top: 15%;
+        }
+        100%
+        {
+            top: -30%;
+        }
+    }
+}

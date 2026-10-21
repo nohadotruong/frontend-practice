@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <title>My profile</title>
+</head>
+
+<body>
+    <div class="header-placeholder" id="header-placeholder"></div>
+
+    <main class="contact-main">
+        <h1>Contact</h1>
+        <div>
+            <div class="contact-form">
+                <div class="form-input">
+                    <label>Your email</label>
+                    <input type="email" id="email-input" placeholder="example@email.com" required>
+                    <label>Title</label>
+                    <input type="text" id="title-input">
+                    <label>Content</label>
+                    <textarea name="" id="content-input" rows="3" required></textarea>
+                </div>
+                <div class="form-button">
+                    <button id="reset-button" onclick="resetButton()">
+                        <p>Reset <i class="bi bi-arrow-counterclockwise"></i></p>
+                    </button>
+                    <button id="send-button" onclick="sendButton()">
+                        <p>Send <i class="bi bi-send-fill"></i></p>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="social-link">
+                <a href="https://www.facebook.com/longtruongphamhai" target="_blank" class="social-account" id="facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/longtruongphamhai" target="_blank" class="social-account" id="linkedin">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/LongTruongPhamHai" target="_blank" class="social-account" id="github">
+                    <i class="bi bi-github"></i>
+                </a>
+                <button class="social-account" id="telephone" onclick="showPhoneNum()"><i
+                        class="bi bi-telephone-fill"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <div id="opacity-form"></div>
+
+    <div class="form-alert" id="form-alert">
+        <div class="alert-content">
+            <label>From:</label>
+            <input type="email" id="email-from" value="example@email.com" readonly>
+            <label>To:</label>
+            <input type="email" id="email-to" value="longtruongphamhai@gmail.com" readonly>
+            <label>Title:</label>
+            <input type="text" id="title-output" value="Hello!" readonly>
+            <label>Content</label>
+            <textarea name="" id="content-output" rows="3" readonly>Hello Long!</textarea>
+        </div>
+        <p>Thank you for reaching out! We have received your email and will respond as soon as possible.</p>
+        <button onclick="closeAlert()">Close</button>
+    </div>
+
+    <div class="footer-placeholder" id="footer-placeholder"></div>
+</body>
+
+<script src="/assets/js/script.js"></script>
+
+</html>

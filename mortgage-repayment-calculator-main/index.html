@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="script.js"></script>
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="my-calculator">
+    <div class="calculator-form">
+      <div class="header">
+        <div class="title">
+          <h3>Mortgage Calculator</h3>
+        </div>
+        <div class="clear">
+          <button class="clear-all" onclick="clearAll()">Clear All</button>
+        </div>
+      </div>
+      <div class="amount">
+        <h4 class="big-label">Mortgage Amount</h4>
+        <div class="amount-input" id="amount-input" >
+          <label id="amount-label">£</label>
+          <input type="number" id="input1" onfocus="amountActive()" onblur="amountBlur()">
+        </div>
+        <p class="error" id="error1">This field is required</p>
+        <div class="selection-field">
+          <div class="mortgage-term">
+            <h4 class="big-label">Mortgage Term</h4>
+            <div class="mortgage-term-input" id="mortgage-term-input">
+              <input type="number" id="input2" onfocus="mortgageTermActive()" onblur="mortgageTermBlur()">
+              <label id="mortgage-term-label">years</label>
+            </div>
+            <p class="error" id="error2">This field is required</p>
+          </div>
+          <div class="interest-rate">
+            <h4 class="big-label">Interest Rate</h4>
+            <div class="interest-rate-input" id="interest-rate-input">
+              <input type="number" id="input3" onfocus="interestRateActive()" onblur="interestRateBlur()">
+              <label id="interest-rate-label">%</label>
+            </div>
+            <p class="error" id="error3">This field is required</p>
+          </div>
+        </div>
+        <div class="mortgage-type">
+          <h4 class="big-label">Mortgage Type</h4>
+          <div class="repayment" id="repayment" onclick="selectRepayment()">
+            <input type="radio" name="mortgage-type" id="repayment-radio">
+            <label>Repayment</label>
+          </div>
+          <div class="interest-only" id="interest-only" onclick="selectInterestOnly()">
+            <input type="radio" name="mortgage-type" id="interest-only-radio">
+            <label>Interest Only</label>
+          </div>
+          
+          <p class="error" id="error4">This field is required</p>
+        </div>
+        <div class="calculator-button">
+          <button onclick="CheckInput(); calculatorResults()">Calculate Repayments</button>
+        </div>
+      </div>
+    </div>
+    <div class="calculator-result">
+      <div class="none-result" id="none-result">
+        <img src="./assets/images/illustration-empty.svg" alt="">
+        <h3>Results shown here</h3>
+        <p>
+          Complete the form and click "calculator repayments" 
+          to see what your monthly repayments would be.
+        </p>
+      </div>
+      <div class="shown-result" id="shown-result">
+        <h3>Your results</h3>
+        <p>
+          Your results are shown below based on the information you
+          provided. To adjust the results, edit the form and click
+          "calculator repayments" again.
+        </p>
+        <div class="your-result">
+          <p>Your monthly repayments</p>
+          <div class="money-results">
+            <!-- <h1>£</h1> -->
+            <h1 id="money-results">asdasd</h1>
+          </div>
+          <hr>
+          <p>Total you'll repay over the term</p>
+          <div class="repay-results">
+            <!-- <h3>£</h3> -->
+            <h3 id="repay-results">asdasd</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="radio" name="mortgage-type" id="hidden-radio" style="display: none;">
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">ixxmmivsdrgn</a>.
+  </div>
+</body>
+</html>

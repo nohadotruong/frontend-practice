@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <title>My profile</title>
+</head>
+
+<body>
+    <div class="header-placeholder" id="header-placeholder"></div>
+
+    <main class="project-main">
+        <div class="project-list">
+            <h1>Projects</h1>
+
+            <button class="project-button" id="project-button1" onclick="openProject(1)">Contact form main</button>
+            <button class="project-button" id="project-button2" onclick="openProject(2)">Mortgage repayment calculator
+                main</button>
+            <button class="project-button" id="project-button3" onclick="openProject(3)">Coming soon!</button>
+            <a href="https://github.com/LongTruongPhamHai?tab=repositories" target="_blank"><button
+                    class="project-button" id="other-project" onclick="closeProject()">Other projects</button></a>
+        </div>
+
+        <div class="project-preview">
+            <h1>Preview</h1>
+
+            <div class="none-project" id="none-project">
+                <p>Click on project to see a preview</p>
+            </div>
+
+            <div class="project-demo" id="project-demo">
+                <img src="/assets/images/contact-form-main-demo.png" class="image-project" id="image-project1" alt="">
+                <a href="https://github.com/LongTruongPhamHai/contact-form-main.git" target="_blank"
+                    class="link-project" id="link-project1">Open in GitHub<i class="bi bi-arrow-up-right"></i></a>
+
+                <img src="/assets/images/mortgage-payment-demo.png" class="image-project" id="image-project2" alt="">
+                <a href="https://github.com/LongTruongPhamHai/mortgage-repayment-calculator-main" target="_blank"
+                    class="link-project" id="link-project2">Open in GitHub<i class="bi bi-arrow-up-right"></i></a>
+
+                <img src="/assets/images/coming-soon.jpeg" class="image-project" id="image-project3" alt="Coming soon">
+                <a href="#" target="_blank" class="link-project" id="link-project3">Open in GitHub<i
+                        class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-placeholder" id="footer-placeholder"></div>
+</body>
+
+<script src="/assets/js/script.js"></script>
+
+</html>
